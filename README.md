@@ -17,6 +17,12 @@ add
 deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui
 ```
 
+change keys
+```
+gpg --keyserver  keyserver.ubuntu.com --recv-keys 9165938D90FDDD2E
+gpg --export --armor  9165938D90FDDD2E | sudo apt-key add -
+```
+
 Try to run
 ```
 wget -O - https://github.com/OpenMediaVault-Plugin-Developers/installScript/raw/master/install | sudo bash
